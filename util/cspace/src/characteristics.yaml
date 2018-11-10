@@ -1,0 +1,38 @@
+arm:
+  length: 18 # inches between elbow and wrist joint
+  thickness: 2 # inches, we use 2x1, so this is 2
+  angle:
+    max: 175 # in degrees
+    min: -35 # in degrees
+
+wrist:
+  clawLength: 10 # inches between pivot and end of claw
+  pistonLength: 10 # inches between pivot and end of piston
+  thickness: 1 # inches, due to the bolts we use
+  angle:
+    max: 180 # deg
+    min: -180 # deg
+
+obstacles:
+  robot:
+    vertices:
+      - {x: 0, y: -5}
+      - {x: 0, y: -12}
+      - {x: 22.5, y: -12}
+      - {x: 50, y: -12}
+      - {x: 50, y: -3}
+      - {x: 22.5, y: -3}
+      - {x: 9, y: 0}
+      - {x: 9, y: -5}
+  ground:
+    vertices:
+      - {x: -30, y: -12}
+      - {x: 30, y: -12}
+      - {x: -30, y: -200}
+      - {x: 30, y: -200}
+  expand: 1 # dilate, in inches
+
+solver:
+  samples:
+    theta: 1024 # This gon take a while
+    phi: 1024 # Maybe reduce by 2-4x?
